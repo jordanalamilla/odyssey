@@ -1,0 +1,46 @@
+.gallery-block {
+
+    // Image
+    .g-image {
+        @include bg-image;
+        width: 100%;
+    }
+
+    // Cover
+    &.image-size-cover {
+        .g-image-wrapper {
+            overflow: hidden;
+        }
+
+        .g-image {
+            object-fit: cover;
+        }
+    }
+
+    // Contain
+    &.image-size-contain {
+        .g-image-wrapper {
+            height: 100%;
+            display: flex;
+            align-items: center;
+        }
+
+        .g-image {
+            object-fit: contain;
+        }
+    }
+
+    // Gap
+    &.has-gap {
+        .row {
+            row-gap: 30px;
+        }
+    }
+
+    // No gap
+    &.no-gap {
+        .container-fluid {
+            padding: 0 !important;
+        }
+    }
+}

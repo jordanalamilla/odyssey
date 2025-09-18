@@ -1,0 +1,11 @@
+.wpcf7 {
+
+    label,
+    input:not([type=submit]),
+    button,
+    select,
+    optgroup,
+    textarea {
+        width: 100%;
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "name": "acf/gallery",
+    "title": "Gallery",
+    "description": "Display a bunch of images. Click to enlarge in a modal.",
+    "style": [],
+    "category": "content",
+    "icon": "grid-view",
+    "keywords": [
+        "images",
+        "modals",
+        "grid"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "gallery.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

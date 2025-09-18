@@ -1,0 +1,20 @@
+{
+    "name": "acf/content",
+    "title": "Content",
+    "description": "Display content from a WYSIWYG editor.",
+    "style": [],
+    "category": "content",
+    "icon": "align-left",
+    "keywords": [
+        "content",
+        "wysiwyg",
+        "text"
+    ],
+    "acf": {
+        "mode": "editor",
+        "renderTemplate": "content.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

@@ -1,0 +1,23 @@
+{
+    "name": "acf/video",
+    "title": "Video",
+    "description": "Display an image link which will launch a video modal when clicked.",
+    "style": [],
+    "category": "content",
+    "icon": "video-alt3",
+    "keywords": [
+        "image",
+        "videos",
+        "embeded",
+        "modal",
+        "link",
+        "youtube"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "video.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

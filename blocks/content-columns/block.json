@@ -1,0 +1,21 @@
+{
+    "name": "acf/content-columns",
+    "title": "Content Columns",
+    "description": "Display an image beside some text content.",
+    "style": [],
+    "category": "content",
+    "icon": "table-col-before",
+    "keywords": [
+        "images",
+        "content",
+        "columns",
+        "text"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "content-columns.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

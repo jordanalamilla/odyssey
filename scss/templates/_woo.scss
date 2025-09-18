@@ -1,0 +1,23 @@
+// Sale badge
+.onsale {
+    @extend .badge;
+    @extend .bg-success;
+}
+
+.onsale {
+    position: absolute;
+    transform: rotate(-20deg);
+}
+
+// Buttons
+.woocommerce:where(body:not(.woocommerce-block-theme-has-button-styles)) button.button.alt {
+    @extend .btn;
+    @extend .btn-success;
+}
+
+// Text color overrides
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product p.price,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product span.price,
+.woocommerce:where(body:not(.woocommerce-uses-block-theme)) div.product .stock {
+    color: $body-color;
+}

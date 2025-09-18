@@ -1,0 +1,46 @@
+/*
+Theme Name: Odyssey
+Author: Jordan
+Author URI: https://jordsodyssey.com
+Description: A generic parent theme containing common functionality among the sites I develop.
+Tags: framework
+Version: 0.1
+Requires at least: 5.0
+Tested up to: 5.4
+Requires PHP: 7.0
+License: GNU General Public License v2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
+Text Domain: odyssey
+This theme, like WordPress, is licensed under the GPL.
+Use it to make something cool, have fun, and share what you've learned with others.
+*/
+
+// Bootstrap
+@import "../node_modules/bootstrap/scss/bootstrap";
+
+// Global
+@import 'global/mixins';
+@import 'global/form';
+
+// Blocks
+@import 'blocks/image-content';
+@import 'blocks/content-columns';
+@import 'blocks/gallery';
+@import 'blocks/content';
+@import 'blocks/slider';
+@import 'blocks/video';
+@import 'blocks/posts';
+@import 'blocks/image';
+
+// Templates
+@import 'templates/header';
+@import 'templates/footer';
+@import 'templates/archive';
+
+// Woocommerce templates
+// @import 'templates/woo';
+// @import 'templates/shop';
+// @import 'templates/product';
+
+// Add ons
+@import 'addons/contact-forms-7';

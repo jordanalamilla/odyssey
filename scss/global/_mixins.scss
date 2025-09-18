@@ -1,0 +1,15 @@
+@mixin bg-image {
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin bg-image-contain {
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+@mixin transition {
+    transition: 0.2s ease all;
+}

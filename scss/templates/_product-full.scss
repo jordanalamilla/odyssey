@@ -1,0 +1,118 @@
+#main {
+    padding-top: 30px;
+}
+
+.single-product {
+
+    // Breadcrumbs
+    .woocommerce-breadcrumb {
+        padding-bottom: 15px;
+    }
+
+    // Main product section
+    .woocommerce-product-gallery img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    .product_title {
+        @include h3-font-style;
+    }
+
+    // Add to cart
+    form.cart {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        input {
+            height: 100%;
+        }
+
+        button {
+            @extend .btn;
+            @extend .btn-success;
+        }
+
+        .woocommerce-variation-add-to-cart {
+            display: flex;
+            gap: 10px;
+        }
+
+        .reset_variations {
+            margin-left: 10px;
+        }
+    }
+
+    .summary {
+        .price {
+            @include h5-font-style;
+        }
+    }
+
+    // Categories and tags
+    .product_meta {
+        @include h6-font-style;
+        display: flex;
+        flex-direction: column;
+    }
+
+    // Tabs
+    .woocommerce-tabs {
+        padding-top: 30px;
+
+        ul.tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            list-style-type: none;
+            padding-left: 0;
+
+            a {
+                @extend .btn;
+                @extend .btn-primary;
+                display: inline-block;
+            }
+        }
+
+        h2,
+        .woocommerce-product-attributes-item__value {
+            @include h5-font-style;
+        }
+
+        .woocommerce-product-attributes-item__label {
+            padding-right: 15px;
+        }
+    }
+
+    // Desktop
+    @include media-breakpoint-up(lg) {
+        .product {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .woocommerce-product-gallery,
+        .summary {
+            width: 50%;
+        }
+
+        .summary {
+            padding-left: 30px;
+        }
+    }
+
+    // Mobile
+    @include media-breakpoint-down(lg) {
+        .woocommerce-product-gallery {
+            margin-bottom: 15px;
+        }
+    }
+}
+
+// Alerts
+.woocommerce-message {
+    @extend .alert;
+    @extend .alert-success;
+}

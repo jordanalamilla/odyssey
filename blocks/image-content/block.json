@@ -1,0 +1,19 @@
+{
+    "name": "acf/image-content",
+    "title": "Image Content",
+    "description": "Display an image beside some text content.",
+    "style": [],
+    "category": "content",
+    "icon": "table-col-before",
+    "keywords": [
+        "image",
+        "content"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "image-content.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

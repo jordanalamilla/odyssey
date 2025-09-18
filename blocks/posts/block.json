@@ -1,0 +1,20 @@
+{
+    "name": "acf/posts",
+    "title": "Posts",
+    "description": "Select posts to display in a grid.",
+    "style": [],
+    "category": "content",
+    "icon": "align-left",
+    "keywords": [
+        "content",
+        "posts",
+        "types"
+    ],
+    "acf": {
+        "mode": "editor",
+        "renderTemplate": "posts.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}

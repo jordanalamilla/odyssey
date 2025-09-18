@@ -1,0 +1,31 @@
+.content-block {
+
+    // Alingments
+    &.align-left {
+        .col-content {
+            text-align: left;
+        }
+    }
+
+    &.align-right {
+        .col-content {
+            text-align: right;
+        }
+    }
+
+    &.align-center {
+        .col-content {
+            text-align: center;
+        }
+    }
+
+    // Smaller width
+    &.has-smaller-width {
+
+        .col-content,
+        .block-footer .col-12 {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+    }
+}

@@ -1,0 +1,161 @@
+body {
+    padding-top: 50px;
+
+    &.admin-bar header {
+        top: 32px;
+    }
+}
+
+header {
+    // @include shadow;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    background-color: rgba($white, 0.95);
+
+    // Logo
+    .navbar-brand {
+        h1 {
+            margin-bottom: unset;
+        }
+    }
+
+    // Menu
+    .navbar {
+        position: relative;
+        z-index: 1;
+        padding: 10px 0;
+    }
+
+    .navbar-collapse {
+        justify-content: flex-end;
+    }
+
+    // Submenus
+    .dropdown-menu[data-bs-popper] {
+        left: unset;
+        right: 0;
+        border-radius: 0;
+        background-color: $light;
+        border: 1px solid $dark;
+
+        .dropdown-item {
+            padding: 5px 15px;
+        }
+
+        a {
+            display: inline-block;
+            width: 100%;
+            text-decoration: none;
+        }
+
+        @include media-breakpoint-down(md) {
+            position: static;
+
+            .dropdown-item {
+                padding: 10px 15px;
+            }
+        }
+    }
+
+    // Mobile menu button
+    .navbar-toggler {
+        border-radius: 0;
+        border: 0;
+        padding: 0;
+
+        &:focus {
+            box-shadow: unset;
+        }
+
+        // Closed
+        &[aria-expanded="true"] {
+            .navbar-toggler-icon {
+                background-image: url('images/icons/close-dark.svg');
+            }
+        }
+
+        // Open
+        &[aria-expanded="false"] {
+            .navbar-toggler-icon {
+                background-image: url('images/icons/menu-dark.svg');
+            }
+        }
+    }
+}
+
+body.home:not(.scrolled) header {
+
+    // Header background colors
+    &:before,
+    &:after {
+        @include transition;
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        width: 0;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+body {
+
+    // Common style changes for scrolled header and mobile menu open
+    &.scrolled,
+    &.mobile-menu-open {
+        header {
+
+            // Menu
+            #menu-primary-menu a {
+                color: $body-color;
+            }
+        }
+    }
+
+    // Scrolled header changes
+    &.scrolled,
+    &:not(.home) {
+
+        // Logo
+        .navbar-brand {}
+
+        // Mobile menu button
+        .navbar-toggler {
+
+            // Open
+            &[aria-expanded="false"] {
+                .navbar-toggler-icon {
+                    background-image: url('images/icons/menu-dark.svg');
+                }
+            }
+        }
+    }
+
+    // Mobile
+    @include media-breakpoint-down(md) {
+        header {
+
+            // Logo
+            .navbar-brand {
+                // width: 200px;
+                // height: 98px;
+            }
+
+            // menu
+            .navbar-collapse {
+                padding: 50px 0 30px;
+
+                #menu-primary-menu {
+                    flex-direction: column;
+                    align-items: center;
+                }
+
+                // Mobile menu open
+                &.show {}
+            }
+        }
+    }
+}

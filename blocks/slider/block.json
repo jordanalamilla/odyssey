@@ -1,0 +1,21 @@
+{
+    "name": "acf/slider",
+    "title": "Slider",
+    "description": "Display images and/or content in a slider.",
+    "style": [],
+    "category": "content",
+    "icon": "slides",
+    "keywords": [
+        "image",
+        "content",
+        "sliders",
+        "slides"
+    ],
+    "acf": {
+        "mode": "auto",
+        "renderTemplate": "slider.php"
+    },
+    "supports": {
+        "anchor": true
+    }
+}
