@@ -12,7 +12,11 @@ wp_head();
 	<meta name="viewport" content="width=device-width, initial-scale=1" />
 	<title>
 		<?php
-			echo esc_attr( get_bloginfo( 'title' ) );
+		if ( is_archive( 'project' ) ) {
+			echo 'Projects - ' . esc_attr( get_bloginfo( 'title' ) );
+		} else {
+			echo esc_html( get_the_title() ) . ' - ' . esc_attr( get_bloginfo( 'title' ) );
+		}
 		?>
 	</title>
 </head>
