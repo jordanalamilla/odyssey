@@ -45,4 +45,15 @@ jQuery(document).ready(function ($) {
     // Remove sidebar
     $('#sidebar').remove();
 
+    // Video block - stop videos on modal close
+    $.each($('.video-block .modal'), function () {
+        let modalElement = $('#' + $(this).attr('id'));
+        let videoModalBody = $(modalElement).find('.modal-body');
+        let videoIframeHTML = $(modalElement).find('.modal-body').html();
+
+        $(modalElement).on('hide.bs.modal', function () {
+            $(videoModalBody).html(' ');
+            $(videoModalBody).html(videoIframeHTML);
+        });
+    });
 });

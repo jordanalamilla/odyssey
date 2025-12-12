@@ -7,6 +7,13 @@
 class Video extends AbstractBlock {
 
 	/**
+	 * The video block ID for stop on close functionality.
+	 *
+	 * @var array $video_block_id
+	 */
+	private $video_modal_id = 0;
+
+	/**
 	 * The video thumbnail image.
 	 *
 	 * @var array $thumbnail_image
@@ -29,6 +36,7 @@ class Video extends AbstractBlock {
 	public function __construct( $block ) {
 		parent::__construct( 'video', $block );
 
+		$this->video_modal_id  = wp_rand( 999999, 9999999 );
 		$this->thumbnail_image = get_field( 'thumbnail_image' );
 		$this->embed_code      = get_field( 'embed_code' );
 	}
@@ -42,13 +50,24 @@ class Video extends AbstractBlock {
 				<div class="col-12">
 
 					<!-- Button trigger modal -->
-					<button type="button" class="video-modal-button" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+					<button type="button"
+						class="video-modal-button"
+						data-bs-toggle="modal"
+						data-bs-target="#video-modal-id-<?php echo esc_attr( $this->video_modal_id ); ?>">
+						
 						<div class="video-thumbnail-play-icon"></div>	
 						<div class="video-thumbnail-image" style="background-image: url('<?php echo esc_url( $this->thumbnail_image['sizes']['large'] ); ?>');"></div>
 					</button>
 
 					<!-- Modal -->
-					<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+					<div class="modal fade"
+						id="video-modal-id-<?php echo esc_attr( $this->video_modal_id ); ?>"
+						data-bs-backdrop="static"
+						data-bs-keyboard="false"
+						tabindex="-1"
+						aria-labelledby="video-modal-id-<?php echo esc_attr( $this->video_modal_id ); ?>"
+						aria-hidden="true">
+						
 						<div class="modal-dialog">
 							<div class="modal-content">
 								<div class="modal-header">
